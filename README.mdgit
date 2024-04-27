@@ -1,0 +1,38 @@
+# DarkQR
+initgit
+add
+README.mdgit
+commit
+-m
+first commit
+git
+branch
+-M
+maingit
+remote
+add
+origin
+https://github.com/Ronalpp/DarkQR.gitgit
+push
+-u
+origin
+main
+# DarkQR
+initgit
+add
+README.mdgit
+commit
+-m
+first commit
+git
+branch
+-M
+maingit
+remote
+add
+origin
+https://github.com/Ronalpp/DarkQR.gitgit
+push
+-u
+origin
+main
