@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import Footer from "./Components/Footer";
+import Footer from "./Components/footer.jsx";
 
 const App = () => {
   const [inputValue, setInputValue] = useState('');
