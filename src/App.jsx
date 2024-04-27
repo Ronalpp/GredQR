@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Footer from "./Components/Footer";
 
 const App = () => {
   const [inputValue, setInputValue] = useState('');
@@ -20,26 +21,43 @@ const App = () => {
   };
 
   return (
-      <div className="main">
-        <h1>Ponga el enlace aquí</h1>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          autoComplete="on"
-        />
-        <button className="animated-button" type="button" onClick={generateQR}>
-          <span>Generar QR</span>
-          <span></span>
-        </button>
-        {qrUrl && (
-          <>
-            <div onContextMenu={copyQRUrl}>
-              <img src={qrUrl} alt="QR Code" />
-            </div>
-          </>
-        )}
+    <div className="main">
+      <h1>Ponga el enlace aquí</h1>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        autoComplete="on"
+      />
+      <button className="animated-button" type="button" onClick={generateQR}>
+        <span>Generar QR</span>
+        <span></span>
+      </button>
+      {qrUrl && (
+        <>
+          <div onContextMenu={copyQRUrl}>
+            <img src={qrUrl} alt="QR Code" />
+          </div>
+
+        </>
+
+      )}
+      <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
       </div>
+       <Footer/>
+    </div>
+
+
 
   );
 };
