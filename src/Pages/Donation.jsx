@@ -1,13 +1,12 @@
 import React from 'react'
-import Header from '../Components/Header'
+import PropTypes from 'prop-types'
 
-const Donation = () => {
+const Donation = props => {
   return (
-    <>
-      <Header />
-      <div>Donation</div>
-    </>
+    <div>Donation</div>
   )
 }
+
+Donation.propTypes = {}
 
 export default Donation

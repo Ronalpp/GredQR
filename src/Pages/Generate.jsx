@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../Components/css/Generate.css';
 import Header from '../Components/Header';
-
+import Footer from "../Components/footer"
 const Generate = () => {
   const [inputValue, setInputValue] = useState('');
   const [qrCodeUrl, setQRCodeUrl] = useState('');
@@ -41,10 +41,7 @@ const Generate = () => {
     setQRSize(event.target.value);
   };
 
-  const validateInput = (value) => {
-    const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
-    setIsValidURL(urlRegex.test(value));
-  };
+ 
 
   const handleSaveQR = () => {
     const a = document.createElement('a');
@@ -102,8 +99,10 @@ const Generate = () => {
         )}
 
         {!isValidURL && inputValue.trim() !== '' && <p className="qr-error-message">Por favor, ingrese una URL válida.</p>}
-      </div>
+      </div> 
+      <Footer />
     </>
+   
   );
 };
 
