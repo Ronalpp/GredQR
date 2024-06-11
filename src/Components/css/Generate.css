@@ -1,59 +1,75 @@
 .qr-generator {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #e6f4ea;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .qr-generator-title {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .qr-input-container {
-    display: flex;
-    margin-bottom: 20px;
-  }
-  
-  .qr-input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px 0 0 5px;
-  }
-  
-  .qr-generate-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #4CAF50;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .qr-generate-button:hover {
-    background-color: #45a049;
-  }
-  
-  .qr-code-container {
-    text-align: center;
-  }
-  
-  .qr-code {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
+  width: auto;
+  background: #161617;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-generator-title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+button,
+input,
+select {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+}
+
+select {
+  margin-left: 1px;
+}
+
+.qr-input-container {
+  width: auto;
+  padding: 1rem;
+  display: flex;
+}
+
+.qr-input-container input {
+  width: 300px;
+}
+
+.qr-generate-btn {
+  margin-left: 1rem;
+}
+
+.qr-generate-btn button {
+  width: 150px;
+  color: white;
+  background: gray;
+}
+
+.qr-code-container {
+  width: 680px;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.qr-code-container img {
+  width: 200px;
+}
+
+.qr-code-container button {
+  width: 200px;
+}
+
+.qr-error-message {
+  background: red;
+  padding: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  border-radius: 2rem 0 2rem 2rem;
+}
