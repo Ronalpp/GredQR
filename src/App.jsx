@@ -12,7 +12,7 @@ function App() {
         <Route index path='/' element={<Home />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/donation' element={<Donation />} />
-        <Route path='generate' element={<Generate />} />
+        <Route path='/generate' element={<Generate />} />
       </Routes>
     </BrowserRouter>
   );
