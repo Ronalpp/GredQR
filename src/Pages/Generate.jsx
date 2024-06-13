@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import '../Components/css/Generate.css';
 import Header from '../Components/Header';
 import Footer from "../Components/footer"
@@ -7,11 +7,11 @@ const Generate = () => {
   const [qrCodeUrl, setQRCodeUrl] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const [qrSize, setQRSize] = useState('150x150');
-  const [isValidURL, setIsValidURL] = useState(true);
+  const [isValidURL] = useState(true);
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
-    validateInput(event.target.value);
+    
   };
 
   const generateQRCode = () => {
@@ -41,7 +41,7 @@ const Generate = () => {
     setQRSize(event.target.value);
   };
 
- 
+
 
   const handleSaveQR = () => {
     const a = document.createElement('a');

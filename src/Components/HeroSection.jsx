@@ -1,7 +1,5 @@
-import React from 'react';
 import 'boxicons';
 import "boxicons/css/boxicons.min.css";
-import Logo from "../assets/scan (2).png";
 
 
 

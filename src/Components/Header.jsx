@@ -1,7 +1,6 @@
-import React from 'react';
 import 'boxicons';
 import "../Components/css/Header.css"
-import Logo2 from "../assets/logo2.png"
+import Logo2 from "../img/logo2.png"
 
 
 const Header = () => {
@@ -13,10 +12,9 @@ const Header = () => {
                 <h1>Gred QR</h1>
             </div>
             <nav className="nav">
+                <a href="/">Home</a>
                 <a href="/generate">Generar Código QR</a>
-
                 <a href="/donation">Donaciones</a>
-                <a href="/contact">Contacto</a>
             </nav>
         </header>
     );

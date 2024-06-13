@@ -1,6 +1,6 @@
 import '../Components/css/Footer.css';
 import 'boxicons';
-import Logo1 from "../assets/logo1.png"
+import Logo1 from "../img/logo1.png"
 
 
 const Footer = () => {
@@ -9,12 +9,12 @@ const Footer = () => {
       <div className="grupo-1">
         <div className="box">
           <figure>
-            <img src={Logo1} alt="" srcset="" />
+            <img src={Logo1} />
             <a href="/">
             </a>
           </figure>
         </div>
-        <div className="box">
+        <div className="boxa">
           <h2>SOBRE NOSOTROS</h2>
           <p>En GredQR, nos especializamos en proporcionar soluciones rápidas y eficientes para la generación de códigos QR. Nuestro objetivo es simplificar el proceso de creación de códigos QR para que puedas enfocarte en lo que realmente importa: tu negocio.
           </p>
