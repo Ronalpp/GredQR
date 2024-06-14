@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  
+  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
 }
@@ -99,10 +99,8 @@ body {
 }
 
 .hero-content {
-  background: rgba(0, 0, 0, 0.5);
   padding: 50px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
@@ -120,10 +118,10 @@ body {
   align-items: center;
   padding: 10px 20px;
   background-color: green;
-  color: green;
+  color: white;
   text-decoration: none;
   font-size: 1.2rem;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: background-color 0.3s ease;
 }
 
@@ -132,7 +130,7 @@ body {
 }
 
 .cta-button:hover {
-  background-color: grey;
+  background-color: #4CAF50;
 }
 
 /* Estilo de la sección de información */
@@ -258,3 +256,66 @@ body {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* Estilo del formulario QR */
+.qr-form-section {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.qr-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.generate-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generate-btn:hover {
+  background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .qr-form-section {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .qr-form input {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .qr-form-section {
+    padding: 10px;
+    margin: 15px auto;
+  }
+
+  .qr-form input {
+    width: 100%;
+  }
+}
+

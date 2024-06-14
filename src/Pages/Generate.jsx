@@ -2,6 +2,7 @@ import  { useState } from 'react';
 import '../Components/css/Generate.css';
 import Header from '../Components/Header';
 import Footer from "../Components/footer"
+
 const Generate = () => {
   const [inputValue, setInputValue] = useState('');
   const [qrCodeUrl, setQRCodeUrl] = useState('');
@@ -57,8 +58,9 @@ const Generate = () => {
   };
 
   return (
-    <>
+    <> 
       <Header />
+     
       <div className="qr-generator">
         <h2 className="qr-generator-title">Generador de Códigos QR</h2>
         <div className="qr-input-container">
@@ -100,6 +102,7 @@ const Generate = () => {
 
         {!isValidURL && inputValue.trim() !== '' && <p className="qr-error-message">Por favor, ingrese una URL válida.</p>}
       </div> 
+      
       <Footer />
     </>
    

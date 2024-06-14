@@ -1,23 +1,35 @@
-import 'boxicons';
-import "../Components/css/Header.css"
+import "./css/Header.css"
 import Logo2 from "../img/logo2.png"
-
-
 const Header = () => {
     return (
-        <header className="header">
-
-            <div className="logo">
-                <a href="/">  <img src={Logo2} alt="" className='logo' /></a>
-                <h1>Gred QR</h1>
-            </div>
-            <nav className="nav">
-                <a href="/">Home</a>
-                <a href="/generate">Generar Código QR</a>
-                <a href="/donation">Donaciones</a>
-            </nav>
-        </header>
+      <header>
+        <div className="logo"> <img src={Logo2} alt="logo2" />
+        <h1 className="Gred">GredQR</h1>
+        </div>
+        <input type="checkbox" id="nav_check" hidden />
+        <nav>
+          <ul>
+            <li>
+              <h4><a href="/" className="active">
+                Home
+              </a></h4>
+            </li>
+            <li>
+              <h4><a href="/generate">Generador QR</a></h4>
+            </li>
+            <li>
+              <h4><a href="/donation">Donaciones</a></h4>
+            </li>
+          </ul>
+        </nav>
+        <label htmlFor="nav_check" className="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label> 
+       
+      </header>
     );
-};
-
-export default Header;
+  };
+  
+  export default Header;

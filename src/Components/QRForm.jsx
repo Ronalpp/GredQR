@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
-
+import { useState } from 'react';
+import "../App.css"
 const QRForm = () => {
   const [url, setUrl] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí iría la lógica para generar el código QR
     console.log(`Generar QR para: ${url}`);
   };
 
   return (
+    <div className="papa">
+
     <section id="generate" className="qr-form-section">
       <h2>Generar Código QR</h2>
       <form onSubmit={handleSubmit} className="qr-form">
@@ -20,11 +21,13 @@ const QRForm = () => {
           onChange={(e) => setUrl(e.target.value)} 
           required 
         />
-        <button type="submit" className="generate-btn">
+        </form>
+        </section>
+      <button type="submit" className="generate-btn">
           Generar
         </button>
-      </form>
-    </section>
+    
+    </div>
   );
 };
 
