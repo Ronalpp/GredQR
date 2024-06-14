@@ -7,7 +7,6 @@ const Generate = () => {
   const [inputValue, setInputValue] = useState('');
   const [qrCodeUrl, setQRCodeUrl] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
-  const [qrSize, setQRSize] = useState('150x150');
   const [isValidURL] = useState(true);
 
   const handleChange = (event) => {
@@ -19,7 +18,7 @@ const Generate = () => {
     if (inputValue.trim() !== '' && isValidURL) {
       setIsGenerating(true);
 
-      fetch(`https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}&data=${encodeURIComponent(inputValue)}`)
+      fetch(`https://api.qrserver.com/v1/create-qr-code/?&data=${encodeURIComponent(inputValue)}`)
         .then(response => {
           if (response.ok) {
             return response.blob();
@@ -38,9 +37,6 @@ const Generate = () => {
     }
   };
 
-  const handleSizeChange = (event) => {
-    setQRSize(event.target.value);
-  };
 
 
 
@@ -71,16 +67,6 @@ const Generate = () => {
             onChange={handleChange}
             className="qr-input"
           />
-          <select
-            value={qrSize}
-            onChange={handleSizeChange}
-            className="qr-size-select"
-          >
-            <option value="100x100">Pequeño (100x100)</option>
-            <option value="250x250">Mediano (250x250)</option>
-            <option value="500x500">Grande (500x500)</option>
-            <option value="1000x1000">Muy grande (1000x1000)</option>
-          </select>
 
           <div className='qr-generate-btn'>
             <button
