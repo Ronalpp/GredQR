@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import "../App.css"
+import "../App.css";
+
 const QRForm = () => {
   const [url, setUrl] = useState('');
 
@@ -9,24 +10,22 @@ const QRForm = () => {
   };
 
   return (
-    <div className="papa">
-
-    <section id="generate" className="qr-form-section">
-      <h2>Generar Código QR</h2>
+    <div className="qr-generator">
+      <h2 className="qr-generator-title">Generar Código QR</h2>
       <form onSubmit={handleSubmit} className="qr-form">
-        <input 
-          type="text" 
-          placeholder="Introduce la URL" 
-          value={url} 
-          onChange={(e) => setUrl(e.target.value)} 
-          required 
-        />
-        </form>
-        </section>
-      <button type="submit" className="generate-btn">
-          Generar
-        </button>
-    
+        <div className="qr-input-container">
+          <input 
+            type="text" 
+            placeholder="Introduce la URL" 
+            value={url} 
+            onChange={(e) => setUrl(e.target.value)} 
+            required 
+          />
+          <button type="submit" className="qr-generate-btn">
+            Generar
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

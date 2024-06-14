@@ -52,6 +52,7 @@ header nav ul li a {
 @media only screen and (max-width: 900px) {
   header {
       padding: 0 30px;
+
   }
 }
 @media only screen and (max-width: 700px) {
@@ -67,6 +68,8 @@ header nav ul li a {
       background: #212121;
       padding: 30px;
       transition: 0.3s;
+      border-radius: 10px;
+
   }
   header #nav_check:checked ~ nav {
       left: 0;
