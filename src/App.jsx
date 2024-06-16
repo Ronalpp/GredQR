@@ -3,17 +3,20 @@ import Home from "./Pages/Home.jsx";
 import Donation from './Pages/Donation.jsx';
 import Generate from './Pages/Generate.jsx';
 import NotFound from "./Pages/Notfound.jsx";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Analytics/>
         <Route path="/" element={<Home />} />
         <Route path="/donation" element={<Donation />} />
         <Route path="/generate" element={<Generate />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
+    
   );
 }
 
