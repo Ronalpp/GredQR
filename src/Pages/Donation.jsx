@@ -14,8 +14,8 @@ const Donations = () => {
         transition={{ duration: 0.5 }}
       >
         <div className="text-center">
-          <h1 className="title">Would you like to make a donation?</h1>
-          <p className="description">Your support helps maintain the development of the software and improve its features.</p>
+          <h1 className="title">¿Le gustaría hacer una donación?</h1>
+         
           <li><a href="https://www.paypal.com/donate/?hosted_button_id=F9RQEH5UYHYK6">
             <motion.button
               className="button"
